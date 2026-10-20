@@ -1,0 +1,2 @@
+#define CFG_TUD_ENABLED 1
+#define CFG_TUD_VENDOR 1

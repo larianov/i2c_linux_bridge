@@ -1,0 +1,13 @@
+{
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "/usr/bin/clangd",
+        "arguments": [
+          "--query-driver=/usr/bin/arm-none-eabi-gcc,/usr/bin/arm-none-eabi-g++",
+          "--background-index"
+        ]
+      }
+    }
+  }
+}
