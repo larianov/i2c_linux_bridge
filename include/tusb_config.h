@@ -1,2 +1,6 @@
+#include <stdint.h>
 #define CFG_TUD_ENABLED 1
 #define CFG_TUD_VENDOR 1
+#define CONFIG_TOTAL_LEN (TUD_CONFIG_DESC_LEN + (CFG_TUD_VENDOR * TUD_VENDOR_DESC_LEN))
+extern uint8_t CMD_STATUS;
+

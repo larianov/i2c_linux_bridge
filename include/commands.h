@@ -1,10 +1,11 @@
-#define CMD_ECHO		0
-#define CMD_GET_FUNC		1
-#define CMD_SET_DELAY		2
-#define CMD_GET_STATUS		3
-#define CMD_I2C_IO		4
-#define CMD_I2C_IO_BEGIN	(1<<0)
-#define CMD_I2C_IO_END		(1<<1)
-#define STATUS_IDLE		0
-#define STATUS_ADDRESS_ACK	1
-#define STATUS_ADDRESS_NAK	2
+#define CMD_ECHO 0
+#define CMD_GET_FUNC 1
+#define CMD_SET_DELAY 2
+#define CMD_GET_STATUS 3
+#define CMD_I2C_IO 4
+#define CMD_I2C_IO_BEGIN (1 << 0)
+#define CMD_I2C_IO_END (1 << 1)
+
+#define STATUS_IDLE 0
+#define STATUS_ADDRESS_ACK 1
+#define STATUS_ADDRESS_NAK 2
