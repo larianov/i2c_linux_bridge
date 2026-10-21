@@ -4,6 +4,7 @@
 #include "hardware/i2c.h"
 #include <stdbool.h>
 #include <stdint.h>
+i2c_inst_t *i2c_def = i2c0;
 bool handle_all(const uint8_t rhport, const tusb_control_request_t *request, i2c_inst_t *i2c){
     if (request->bmRequestType_bit.direction == TUSB_DIR_IN) {
         return handle_reading(rhport, request, i2c);

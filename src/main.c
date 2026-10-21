@@ -19,9 +19,9 @@ int main(void) {
     tusb_rhport_init_t struct_for_initing = {.role = TUSB_ROLE_DEVICE, .speed = TUSB_SPEED_FULL};
     tusb_rhport_init(0, &struct_for_initing);
     sleep_ms(2000);
-    i2c_init(i2c0, 100 * 1000);
-    gpio_set_function(16, GPIO_FUNC_I2C);
-    gpio_set_function(17, GPIO_FUNC_I2C);
+    i2c_init(i2c_def, I2C_SPEED);
+    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
+    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
     while (true) {
         tud_task();
         if (task.needs_to_handle) {
@@ -30,6 +30,6 @@ int main(void) {
             task.needs_to_handle = false;
         }
         if (tud_task_event_ready()) continue;
-        //__wfi();
+        __wfi();
     }
 }
